@@ -1,0 +1,45 @@
+{
+  "name": "dsh-toonflow-canvas",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "在 DeepSeek Harness 里内嵌 Toonflow 无限画布面板。需本机已运行 Toonflow（默认 http://127.0.0.1:6017）。",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "toonflow",
+    "canvas",
+    "infinite-canvas"
+  ],
+  "license": "MIT",
+  "author": "dsh-toonflow-canvas contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuke-zhu/dsh-toonflow-canvas"
+  },
+  "homepage": "https://github.com/liuke-zhu/dsh-toonflow-canvas",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-sidebar"]
+    }
+  }
+}

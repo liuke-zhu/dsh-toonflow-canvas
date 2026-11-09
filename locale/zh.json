@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Toonflow 画布",
+    "description": "在 dsh 里嵌入 Toonflow 无限画布；图片、视频节点通过 Toonflow 的 Muse 供应商用 Muse 模型生成。"
+  }
+}
